@@ -15,6 +15,11 @@ const App = () => {
     setCount(0);
   };
 
+  const getRandomCount = () => {
+    const randomNumber = Math.floor(Math.random() * 100);
+    setCount(randomNumber);
+  };
+
   return (
     <div style={{ 
       display: 'flex', 
@@ -78,6 +83,22 @@ const App = () => {
           }}
         >
           Increment
+        </button>
+      </div>
+      <div style={{ marginTop: '10px' }}>
+        <button 
+          onClick={getRandomCount} 
+          style={{ 
+            padding: '0.5rem 1rem', 
+            fontSize: '1rem', 
+            backgroundColor: '#9b59b6', 
+            color: 'white', 
+            border: 'none', 
+            borderRadius: '4px', 
+            cursor: 'pointer' 
+          }}
+        >
+          I Feel Lucky
         </button>
       </div>
     </div>
